@@ -1,0 +1,171 @@
+{
+  "identity": {
+    "name": "E1",
+    "persona": "The Anti-AI Designer",
+    "philosophy": "Fusion over Imitation. Emotion First. Content is King. Zoom In. Negative Space. Contrast.",
+    "anti_patterns": [
+      "No generic 'Bootstrap' layouts",
+      "No 'Inter' for headings",
+      "No gradient overload",
+      "No center-everything",
+      "No transparent backgrounds without blur/scrim"
+    ]
+  },
+  "theme_strategy": {
+    "mode": "dual",
+    "default": "light",
+    "toggle_strategy": "class_based",
+    "themes": {
+      "light": {
+        "name": "Academic Lab",
+        "description": "Crisp, trustworthy, publication-ready.",
+        "colors": {
+          "background": "#F8F9FA",
+          "foreground": "#0F172A",
+          "card": "#FFFFFF",
+          "border": "#E2E8F0",
+          "primary": "#0F172A", 
+          "secondary": "#F1F5F9",
+          "accent": "#0F172A",
+          "success": "#10B981", 
+          "warning": "#F59E0B",
+          "error": "#EF4444",
+          "chart_palette": ["#0F172A", "#3B82F6", "#10B981", "#F59E0B", "#EF4444"]
+        }
+      },
+      "dark": {
+        "name": "Data Ops",
+        "description": "High-contrast, professional, focused.",
+        "colors": {
+          "background": "#020408", 
+          "foreground": "#F8FAFC",
+          "card": "#0B1015",
+          "border": "#1E293B",
+          "primary": "#F8FAFC",
+          "secondary": "#1E293B",
+          "accent": "#6366F1",
+          "success": "#34D399",
+          "warning": "#FBBF24",
+          "error": "#F87171",
+          "chart_palette": ["#6366F1", "#A855F7", "#EC4899", "#14B8A6", "#F43F5E"]
+        }
+      }
+    }
+  },
+  "typography": {
+    "font_family": {
+      "headings": "Plus Jakarta Sans, sans-serif",
+      "body": "Inter, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "scale": {
+      "h1": "text-4xl md:text-5xl font-bold tracking-tight",
+      "h2": "text-3xl font-semibold tracking-tight",
+      "h3": "text-2xl font-semibold tracking-tight",
+      "p": "text-base leading-relaxed text-muted-foreground",
+      "small": "text-sm font-medium text-muted-foreground",
+      "mono": "font-mono text-xs tracking-wide"
+    }
+  },
+  "layout_system": {
+    "grid_strategy": "The Bento Grid (Mode B - High Density)",
+    "container": "max-w-[1400px] mx-auto px-6 md:px-8",
+    "spacing": {
+      "section_gap": "gap-8",
+      "widget_gap": "gap-6",
+      "internal_padding": "p-6"
+    },
+    "sidebar": {
+      "width": "w-64",
+      "collapsed_width": "w-16",
+      "style": "border-r border-border bg-card/50 backdrop-blur-xl fixed left-0 h-full z-40"
+    }
+  },
+  "components": {
+    "card": {
+      "style": "grid_border",
+      "base": "bg-card border border-border/60 rounded-lg overflow-hidden relative",
+      "hover": "hover:border-primary/20 transition-colors duration-300",
+      "header": "p-6 border-b border-border/40 bg-muted/20",
+      "content": "p-6"
+    },
+    "button": {
+      "style": "sharp_modern",
+      "variants": {
+        "default": "bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm rounded-md h-10 px-4 py-2 font-medium transition-all active:scale-95",
+        "outline": "border border-input bg-background hover:bg-accent hover:text-accent-foreground rounded-md h-10 px-4 py-2 font-medium transition-all active:scale-95",
+        "ghost": "hover:bg-accent hover:text-accent-foreground rounded-md h-10 px-4 py-2 font-medium transition-all"
+      }
+    },
+    "input": {
+      "style": "minimal_tech",
+      "base": "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+    },
+    "charts": {
+      "library": "recharts",
+      "style": "minimal_grid",
+      "tooltip": "bg-background/90 backdrop-blur border border-border shadow-xl rounded-md p-3 text-xs"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": "backdrop-blur-xl bg-background/70 border-b border-white/10",
+    "grid_background": "bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]",
+    "noise_texture": "opacity-[0.03] pointer-events-none fixed inset-0 z-50 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"
+  },
+  "motion": {
+    "library": "framer-motion",
+    "reduced_motion": "respect-user-preference",
+    "presets": {
+      "fade_in": { "initial": { "opacity": 0 }, "animate": { "opacity": 1 }, "transition": { "duration": 0.4 } },
+      "slide_up": { "initial": { "opacity": 0, "y": 20 }, "animate": { "opacity": 1, "y": 0 }, "transition": { "duration": 0.5, "ease": "easeOut" } },
+      "stagger_container": { "hidden": { "opacity": 0 }, "show": { "opacity": 1, "transition": { "staggerChildren": 0.1 } } }
+    }
+  },
+  "images": {
+    "backgrounds": [
+      {
+        "url": "https://images.unsplash.com/photo-1765046255500-ce203b84c307?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGRhdGElMjBuZXR3b3JrJTIwbWluaW1hbHxlbnwwfHx8fDE3NzA5MjQyMzZ8MA&ixlib=rb-4.1.0&q=85",
+        "category": "abstract_grid",
+        "description": "Soft gray grid pattern for Simulator or Training background"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1765046255478-55efc763637c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMGRhdGElMjBuZXR3b3JrJTIwbWluaW1hbHxlbnwwfHx8fDE3NzA5MjQyMzZ8MA&ixlib=rb-4.1.0&q=85",
+        "category": "flow_lines",
+        "description": "White wavy lines for 'User Flow' visualization background"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "IMPERATIVE: Read the 'UNIVERSAL GUIDELINES FOR MAIN AGENT' below before writing any code.",
+    "Install 'lucide-react' for icons.",
+    "Install 'recharts' for charts.",
+    "Install 'framer-motion' for animations.",
+    "Install 'clsx' and 'tailwind-merge' for utility handling.",
+    "Use the 'Grid Borders' style for all cards in the dashboard.",
+    "Implement the 'Pipeline' visualizer for the Model Training page.",
+    "Use the 'Terminal' style list for the User Simulator page.",
+    "Ensure 'data-testid' is present on all interactive elements.",
+    "Do NOT use 'Inter' for headings. Use 'Plus Jakarta Sans' (import from Google Fonts).",
+    "For the 'Training' page, use a stepped process layout (Steppers).",
+    "For the 'Simulator', make it feel live/real-time with auto-scrolling lists.",
+    "Use 'sonner' for all toast notifications."
+  ],
+  "universal_guidelines": [
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy",
+    "Use glass-morphism effects with backdrop filters (12-24px blur)",
+    "You MUST NOT apply universal transition. Eg: transition: all. This results in breaking transforms. Always add transitions for specific interactive elements like button, input excluding transforms",
+    "You MUST NOT center align the app container, ie do not add .App { text-align: center; } in the css file. This disrupts the human natural reading flow of text",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states: separates good from extraordinary.",
+    "Main agent relies on these image URLs. Missing categories = main agent will use placeholder text which is FORBIDDEN",
+    "Prioritize using pre-existing components from src/components/ui when applicable",
+    "Components MUST use named exports (export const ComponentName = ...)",
+    "Pages MUST use default exports (export default function PageName() {...})",
+    "Use 'sonner' for toasts"
+  ]
+}
